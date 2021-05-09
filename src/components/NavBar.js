@@ -1,8 +1,36 @@
-import './NavBar.css';
+import { useState } from 'react';
+
 import logo from '../assets/img/png/logo.png';
 import tuat from '../assets/img/jpg/tuat.jpg';
 
+import './NavBar.css';
+
 const NavBar = () => {
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+
+  const openNotifications = () => {
+    if (showNotifications) {
+      setShowNotifications(false);
+    } else {
+      setShowNotifications(true);
+      setShowSettings(false);
+    }
+  }
+
+  const dropdownNotification = `dropdown-menu ${showNotifications ? 'dropdown-expand' : ''}`
+
+  const openSettings = () => {
+    if (showSettings) {
+      setShowSettings(false);
+    } else {
+      setShowNotifications(false);
+      setShowSettings(true);
+    }
+  }
+
+  const dropdownSettings = `dropdown-menu ${showSettings ? 'dropdown-expand' : ''}`
+
   return (
 
     // nav left
@@ -28,19 +56,23 @@ const NavBar = () => {
 
       {/* nav left */}
       <ul className="navbar-nav nav-right">
-        <li className="nav-item dropdown">
+        <li
+          className="nav-item dropdown"
+          onClick={openNotifications}
+        >
           <a href="#" className="nav-link">
-            <i className="fas fa-bell"></i>
+            <i className="fas fa-bell" data-toggle="notification-menu"></i>
             <span class="navbar-badge">15</span>
           </a>
-          <ul className="dropdown-menu">
+          <ul id="notification-menu"
+            className={dropdownNotification}>
             <div class="dropdown-menu-header">
               <span>
                 Notifications
 						</span>
             </div>
 
-            <div className="dropdown-menu-content">
+            <div className="dropdown-menu-content overlay-scrollbar">
               {/* dropdown items */}
               <li className="dropdown-menu-item">
                 <a href="#" className="dropdown-menu-link">
@@ -253,18 +285,62 @@ const NavBar = () => {
                 </a>
               </li>
               {/* fin dropdown items */}
-
             </div>
             <div class="dropdown-menu-footer">
               <span>
-                Notifications
-						</span>
+                View all notifications
+						  </span>
             </div>
           </ul>
         </li>
-        <li className="nav-item">
-          <div className="avt">
-            <img src={tuat} alt="User image" />
+        <li
+          className="nav-item avt-wrapper"
+          onClick={openSettings}
+        >
+          <div className="avt dropdown">
+            <img src={tuat} alt="User image" className="dropdown-toggle" data-toggle="user-menu" />
+            <ul id="user-menu" className={dropdownSettings}>
+              <li className="dropdown-menu-item">
+                <a className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-user-tie"></i>
+                  </div>
+                  <span>Profile</span>
+                </a>
+              </li>
+              <li class="dropdown-menu-item">
+                <a href="#" class="dropdown-menu-link">
+                  <div>
+                    <i class="fas fa-cog"></i>
+                  </div>
+                  <span>Settings</span>
+                </a>
+              </li>
+              <li class="dropdown-menu-item">
+                <a href="#" class="dropdown-menu-link">
+                  <div>
+                    <i class="far fa-credit-card"></i>
+                  </div>
+                  <span>Payments</span>
+                </a>
+              </li>
+              <li class="dropdown-menu-item">
+                <a href="#" class="dropdown-menu-link">
+                  <div>
+                    <i class="fas fa-spinner"></i>
+                  </div>
+                  <span>Projects</span>
+                </a>
+              </li>
+              <li class="dropdown-menu-item">
+                <a href="#" class="dropdown-menu-link">
+                  <div>
+                    <i class="fas fa-sign-out-alt"></i>
+                  </div>
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </li>
       </ul>
