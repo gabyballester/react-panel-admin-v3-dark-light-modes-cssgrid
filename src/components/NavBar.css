@@ -36,15 +36,17 @@
    display: row;
    justify-content: flex-start;
    align-items: center;
-   margin: 0 25px;
+   margin-left: 35px;
  }
 
- .logo-container > h3{
-   margin: 0 5px;
+ .logo-container > h2{
+   margin: 0 15px;
  }
 
- .nav-logo {
-   border-radius: 5px;
+ @media screen and (max-width: 600px) {
+  .logo-container{
+    margin-left: 25px;
+  }
  }
 
  .nav-item {

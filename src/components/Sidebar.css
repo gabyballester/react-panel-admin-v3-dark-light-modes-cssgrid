@@ -10,6 +10,12 @@
   transition: width .5s;
 }
 
+@media screen and (max-width: 600px) {
+  .sidebar{
+    width: 0;
+  }
+}
+
 .sidebar:hover,
 .sidebar.expand {
   width: 250px;

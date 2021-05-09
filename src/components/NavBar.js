@@ -51,7 +51,7 @@ const NavBar = (props) => {
         </li>
         <li className="logo-container">
           <i className="fab fa-react"></i>
-          <h3>Gabriel Ballester</h3>
+          <h2>Gabriel Ballester</h2>
         </li>
       </ul>
       {/* end nav left */}
