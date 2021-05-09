@@ -1,4 +1,5 @@
-import React from 'react'
+import './NavBar.css';
+import logo from '../assets/img/png/logo.png';
 
 const NavBar = () => {
   return (
@@ -11,10 +12,8 @@ const NavBar = () => {
             <i className="fas fa-bars"></i>
           </a>
         </li>
-        <li className="nav-item">
-          <a href="#" className="nav-link">
-            <i className="fas fa-bars"></i>
-          </a>
+        <li className="nav-item logo-container">
+				<img className="nav-logo" src={logo} />
         </li>
       </ul>
       {/* end nav left */}
