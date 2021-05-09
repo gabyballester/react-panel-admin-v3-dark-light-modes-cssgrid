@@ -1,5 +1,6 @@
 import './NavBar.css';
 import logo from '../assets/img/png/logo.png';
+import tuat from '../assets/img/jpg/tuat.jpg';
 
 const NavBar = () => {
   return (
@@ -33,9 +34,9 @@ const NavBar = () => {
           </a>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link">
-            <i className="fas fa-bars"></i>
-          </a>
+          <div className="avt">
+            <img src={tuat} alt="User image" />
+          </div>
         </li>
       </ul>
       {/* end nav left */}

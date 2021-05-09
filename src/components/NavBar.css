@@ -79,3 +79,13 @@
 .nav-logo {
 	border-radius: 5px;
 }
+
+.avt {
+	padding: 11px
+}
+
+.avt img {
+	width: 39px;
+	height: 39px;
+	border-radius: 50%;
+}
