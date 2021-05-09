@@ -1,6 +1,11 @@
 .wrapper {
-	padding: 10px;
+  padding: 10px;
   margin-left: 82px;
-	padding-top: 75px;
-	background: var(--second-bg-color);
+  padding-top: 75px;
+  background: var(--second-bg-color);
+  transition: margin-left .5s;
+}
+
+.wrapper.expand {
+  margin-left: 250px;
 }

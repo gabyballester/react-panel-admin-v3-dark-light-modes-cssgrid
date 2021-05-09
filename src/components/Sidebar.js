@@ -1,8 +1,11 @@
 import './Sidebar.css'
 
-const Sidebar = () => {
+const Sidebar = ({ showSidebar }) => {
+
+  const sidebarContainer = `sidebar ${showSidebar ? 'expand' : ''}`;
+
   return (
-    <div className="sidebar">
+    <div className={sidebarContainer}>
       <ul class="sidebar-nav">
         <li class="sidebar-nav-item">
           <a href="#" class="sidebar-nav-link">

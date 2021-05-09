@@ -5,9 +5,13 @@ import tuat from '../assets/img/jpg/tuat.jpg';
 
 import './NavBar.css';
 
-const NavBar = () => {
+const NavBar = ({ showSidebar, setShowSidebar }) => {
   const [showNotifications, setShowNotifications] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
+  }
 
   const openNotifications = () => {
     if (showNotifications) {
@@ -36,7 +40,9 @@ const NavBar = () => {
     // nav left
     <div className="navbar">
       <ul className="navbar-nav nav-left">
-        <li className="nav-item">
+        <li className="nav-item"
+          onClick={toggleSidebar}
+        >
           <a href="#" className="nav-link">
             <i className="fas fa-bars"></i>
           </a>
