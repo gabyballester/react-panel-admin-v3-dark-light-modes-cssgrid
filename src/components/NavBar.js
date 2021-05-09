@@ -30,7 +30,8 @@ const NavBar = () => {
       <ul className="navbar-nav nav-right">
         <li className="nav-item">
           <a href="#" className="nav-link">
-            <i className="fas fa-bars"></i>
+            <i className="fas fa-bell"></i>
+            <span class="navbar-badge">15</span>
           </a>
         </li>
         <li className="nav-item">

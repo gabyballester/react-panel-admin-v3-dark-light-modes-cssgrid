@@ -32,6 +32,7 @@
   text-decoration: none;
   font-size: 17px;
   color: var(--second-color);
+  position: relative;
 }
 
 .nav-link:hover {
@@ -82,6 +83,18 @@
 
 .avt {
 	padding: 11px
+}
+
+.navbar-badge {
+	font-size: .6rem;
+	padding: 2px 4px;
+	font-weight: 300;
+	position: absolute;
+	right: 5px;
+	top: 9px;
+	color: #fff;
+	background: var(--danger-color);
+	border-radius: 5px;
 }
 
 .avt img {
