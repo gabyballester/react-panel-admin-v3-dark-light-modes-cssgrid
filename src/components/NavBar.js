@@ -14,7 +14,7 @@ const NavBar = () => {
           </a>
         </li>
         <li className="nav-item logo-container">
-				<img className="nav-logo" src={logo} />
+          <img className="nav-logo" src={logo} />
         </li>
       </ul>
       {/* end nav left */}
@@ -28,11 +28,239 @@ const NavBar = () => {
 
       {/* nav left */}
       <ul className="navbar-nav nav-right">
-        <li className="nav-item">
+        <li className="nav-item dropdown">
           <a href="#" className="nav-link">
             <i className="fas fa-bell"></i>
             <span class="navbar-badge">15</span>
           </a>
+          <ul className="dropdown-menu">
+            <div class="dropdown-menu-header">
+              <span>
+                Notifications
+						</span>
+            </div>
+
+            <div className="dropdown-menu-content">
+              {/* dropdown items */}
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-gift"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>
+                      15/07/2020
+									</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-tasks"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>15/07/2020</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-gift"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>
+                      15/07/2020
+									</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-tasks"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>15/07/2020</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-gift"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>
+                      15/07/2020
+									</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-tasks"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>15/07/2020</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-gift"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>
+                      15/07/2020
+									</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-tasks"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>15/07/2020</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-gift"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>
+                      15/07/2020
+									</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-tasks"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>15/07/2020</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-gift"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>
+                      15/07/2020
+									</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-tasks"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>15/07/2020</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-gift"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>
+                      15/07/2020
+									</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-tasks"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>15/07/2020</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-gift"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>
+                      15/07/2020
+									</span>
+                  </span>
+                </a>
+              </li>
+              <li className="dropdown-menu-item">
+
+                <a href="#" className="dropdown-menu-link">
+                  <div>
+                    <i className="fas fa-tasks"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br />
+                    <span>15/07/2020</span>
+                  </span>
+                </a>
+              </li>
+              {/* fin dropdown items */}
+
+            </div>
+            <div class="dropdown-menu-footer">
+              <span>
+                Notifications
+						</span>
+            </div>
+          </ul>
         </li>
         <li className="nav-item">
           <div className="avt">
