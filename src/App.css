@@ -10,3 +10,17 @@ body {
 	color: var(--main-color);
 	margin: 0;
 }
+
+.light{
+	--main-bg-color: var(--light-background);
+	--second-bg-color: var(--light-second-background);
+	--main-color: var(--light-color);
+	--second-color: var(--light-second-color);
+}
+
+.dark{
+	--main-bg-color: var(--dark-background);
+	--second-bg-color: var(--dark-second-background);
+	--main-color: var(--dark-color);
+	--second-color: var(--dark-second-color);
+}

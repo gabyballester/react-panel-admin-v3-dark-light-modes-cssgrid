@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-import logo from '../assets/img/png/logo.png';
-import tuat from '../assets/img/jpg/tuat.jpg';
+import user from '../assets/img/jpg/user.jpg';
 
 import './NavBar.css';
 
-const NavBar = ({ showSidebar, setShowSidebar }) => {
+const NavBar = (props) => {
+  const {showSidebar, setShowSidebar, darkMode, setDarkMode} = props;
   const [showNotifications, setShowNotifications] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
 
@@ -35,6 +35,8 @@ const NavBar = ({ showSidebar, setShowSidebar }) => {
 
   const dropdownSettings = `dropdown-menu ${showSettings ? 'dropdown-expand' : ''}`
 
+  const mode = `fas fa-${darkMode ? 'moon': 'sun'}`
+
   return (
 
     // nav left
@@ -47,21 +49,30 @@ const NavBar = ({ showSidebar, setShowSidebar }) => {
             <i className="fas fa-bars"></i>
           </a>
         </li>
-        <li className="nav-item logo-container">
-          <img className="nav-logo" src={logo} />
+        <li className="logo-container">
+          <i className="fab fa-react"></i>
+          <h3>Gabriel Ballester</h3>
         </li>
       </ul>
       {/* end nav left */}
 
       {/* form */}
-      <form className="navbar-search">
-        <input type="text" name="Search" className="navbar-search-input" placeholder="What you looking for..." />
+      {/* <form className="navbar-search">
+        <input type="text" name="Search" className="navbar-search-input" placeholder="What are you looking for..." />
         <i class="fas fa-search"></i>
-      </form>
+      </form> */}
       {/* end form */}
 
       {/* nav left */}
       <ul className="navbar-nav nav-right">
+        <li 
+        className="nav-item"
+        onClick={()=>setDarkMode(!darkMode)}
+        >
+          <div className="nav-link">
+            <i className={mode}></i>
+          </div>
+        </li>
         <li
           className="nav-item dropdown"
           onClick={openNotifications}
@@ -304,7 +315,7 @@ const NavBar = ({ showSidebar, setShowSidebar }) => {
           onClick={openSettings}
         >
           <div className="avt dropdown">
-            <img src={tuat} alt="User image" className="dropdown-toggle" data-toggle="user-menu" />
+            <img src={user} alt="User image" className="dropdown-toggle" data-toggle="user-menu" />
             <ul id="user-menu" className={dropdownSettings}>
               <li className="dropdown-menu-item">
                 <a className="dropdown-menu-link">

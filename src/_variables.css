@@ -13,10 +13,4 @@
 	--dark-second-color: #f5f6fa;
 	--dark-background: #23242D;
 	--dark-second-background: #181818;
-
-
-	--main-bg-color: var(--light-background);
-	--second-bg-color: var(--light-second-background);
-	--main-color: var(--light-color);
-	--second-color: var(--light-second-color);
 }
