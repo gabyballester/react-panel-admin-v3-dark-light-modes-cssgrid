@@ -4,11 +4,13 @@
 	--warning-color: #f0932b;
 	--danger-color: #eb4d4b;
 
+	--light-ultra-color: white;
 	--light-color: #212529;
 	--light-second-color: #727475;
 	--light-background: #ffffff;
 	--light-second-background: #f1f1f1;
 
+	--dark-ultra-color: black;
 	--dark-color: #909090;
 	--dark-second-color: #f5f6fa;
 	--dark-background: #23242D;

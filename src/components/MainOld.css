@@ -1,0 +1,22 @@
+.wrapper {
+  padding: 10px;
+  margin-left: 82px;
+  padding-top: 75px;
+  background: var(--second-bg-color);
+  color: var(--main-color);
+  transition: margin-left .5s;
+  height: 100vh;
+}
+
+.wrapper.expand {
+  margin-left: 250px;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper{
+    margin-left: 0;
+  }
+  .wrapper.expand {
+    margin-left: 0;
+  }
+}
