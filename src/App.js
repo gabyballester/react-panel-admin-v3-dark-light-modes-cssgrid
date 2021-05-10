@@ -9,7 +9,7 @@ import Sidebar from "./components/Sidebar";
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  var theme = darkMode ? theme = 'dark' : theme = 'light';
+  const theme = darkMode ? 'dark' : 'light';
 
   return (
     <div className={theme}>
