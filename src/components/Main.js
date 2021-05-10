@@ -1,7 +1,11 @@
+import { useRef } from 'react';
+
+import Chart from './Chart';
+
 import './Main.css';
 
 const Main = ({ showSidebar }) => {
-
+  const chartRef = useRef(null);
   const sidebarContainer = `wrapper ${showSidebar ? 'expand' : ''}`;
 
   return (
@@ -146,46 +150,57 @@ const Main = ({ showSidebar }) => {
             <i class="fas fa-ellipsis-h"></i>
           </div>
           <div class="card-content">
-						<div class="progress-wrapper">
-							<p>
-								Less than 1 hour
+            <div class="progress-wrapper">
+              <p>
+                Less than 1 hour
 								<span class="float-right">50%</span>
-							</p>
-							<div class="progress">
-								<div class="bg-success" style={{width: '50%'}}></div>
-							</div>
-						</div>
-						<div class="progress-wrapper">
-							<p>
-								1 - 3 hours
+              </p>
+              <div class="progress">
+                <div class="bg-success" style={{ width: '50%' }}></div>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <p>
+                1 - 3 hours
 								<span class="float-right">60%</span>
-							</p>
-							<div class="progress">
-								<div class="bg-primary" style={{width: '60%'}}></div>
-							</div>
-						</div>
-						<div class="progress-wrapper">
-							<p>
-								More than 3 hours
+              </p>
+              <div class="progress">
+                <div class="bg-primary" style={{ width: '60%' }}></div>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <p>
+                More than 3 hours
 								<span class="float-right">40%</span>
-							</p>
-							<div class="progress">
-								<div class="bg-warning" style={{width: '40%'}}></div>
-							</div>
-						</div>
-						<div class="progress-wrapper">
-							<p>
-								More than 6 hours
+              </p>
+              <div class="progress">
+                <div class="bg-warning" style={{ width: '40%' }}></div>
+              </div>
+            </div>
+            <div class="progress-wrapper">
+              <p>
+                More than 6 hours
 								<span class="float-right">20%</span>
-							</p>
-							<div class="progress">
-								<div class="bg-danger" style={{width: '20%'}}></div>
-							</div>
-						</div>
-					</div>
+              </p>
+              <div class="progress">
+                <div class="bg-danger" style={{ width: '20%' }}></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
+      <div className="row-chart">
+        <div className="col">
+          <div className="card">
+            <div className="card-header">
+              <h3>ChartJS</h3>
+            </div>
+            <div ref={chartRef} className="card-content-chart">
+              <Chart chartRef={chartRef} />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
