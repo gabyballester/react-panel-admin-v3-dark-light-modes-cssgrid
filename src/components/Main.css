@@ -28,22 +28,108 @@
   background: var(--danger-color);
 }
 
-.row {
+.row-header {
   padding: 10px;
   display: grid;
   grid-gap: 10px;
-  /* grid-template-columns: repeat(4, 1fr); */
 }
 
 .counter {
-	padding: 16px;
-	text-align: center;
-	color: #fff;
-	border-radius: 10px;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-@media only screen and (min-width: 992px) {}
+.counter i {
+  font-size: 40px;
+}
+
+.card {
+  background: var(--main-bg-color);
+  color: var(--main-color);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  padding: 15px 30px;
+  border-bottom: 1px solid var(--second-bg-color);
+  position: relative;
+}
+
+.card-header h3 {
+  margin: 0;
+}
+
+.card-header i {
+  color: var(--main-color);
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card-header i:hover {
+  cursor: pointer;
+}
+
+.card-content {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.row-table-data {
+  padding: 10px;
+  display: grid;
+  grid-gap: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td {
+  border-top: 1px solid var(--second-bg-color);
+  padding: 15px;
+}
+
+table th {
+  border-top: 1px solid var(--second-bg-color);
+  border-bottom: 1px solid var(--second-bg-color);
+  padding: 15px 12px;
+  text-align: left;
+}
+
+.dot i {
+	display: inline-block;
+	width: .385rem;
+	height: .385rem;
+	margin-right: .385rem;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+
+.progress-wrapper {
+	margin-bottom: 15px;
+}
+
+.float-right {
+	float: right;
+}
+
+.progress {
+	height: 10px;
+	overflow: hidden;
+	display: flex;
+	font-size: .75rem;
+	background: rgba(0,0,0,0.05);
+	border-radius: .25rem;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
 
 /* Small devices >= 600px */
 @media screen and (max-width: 600px) {
@@ -54,21 +140,35 @@
   .wrapper.expand {
     margin-left: 0;
   }
-  .row {
-    grid-template-columns: repeat(1, 1fr);
+
+  .row-header {
+    grid-template-columns: 1, 1fr;
+  }
+  .row-table-data {
+    grid-template-columns: 1fr;
   }
 }
 
 /* Medium devices  >= 670px */
 @media screen and (min-width: 670px) {
-  .row {
+  .row-header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* laptops/desktops >= 1024px */
 @media screen and (min-width: 1024px) {
-  .row {
+  .row-header {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .row-table-data {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+/* very large laptops/desktops >= 1200 */
+@media screen and (min-width: 1200px) {
+  .row-table-data {
+    grid-template-columns: 1fr 400px;
   }
 }
