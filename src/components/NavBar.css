@@ -40,12 +40,16 @@
  }
 
  .logo-container > h2{
-   margin: 0 15px;
+   margin-left: 15px;
  }
 
  @media screen and (max-width: 600px) {
   .logo-container{
-    margin-left: 25px;
+    margin-left: 15px;
+  }
+  .logo-container > h2{
+    font-size: 1.1rem;
+    margin-left: 10px;
   }
  }
 
